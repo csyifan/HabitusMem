@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "habitusmem"
+version = "0.1.0"
+description = "Belief-state memory writer and PersonaMem-v2 evaluation for personalized LLM agents"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.4",
+    "transformers>=5.2.0",
+    "peft>=0.18.1",
+    "accelerate>=1.7.0",
+    "huggingface_hub>=0.30",
+]
+
+[project.scripts]
+habitusmem-eval = "habitusmem.eval_personamem:main"
+habitusmem-aggregate = "habitusmem.aggregate_personamem:main"
+
+[tool.setuptools.packages.find]
+include = ["habitusmem*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

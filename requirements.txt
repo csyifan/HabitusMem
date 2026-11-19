@@ -1,0 +1,5 @@
+torch>=2.4
+transformers>=5.2.0
+peft>=0.18.1
+accelerate>=1.7.0
+huggingface_hub>=0.30
